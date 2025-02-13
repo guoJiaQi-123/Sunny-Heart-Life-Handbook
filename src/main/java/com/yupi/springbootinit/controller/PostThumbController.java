@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 帖子点赞接口
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @RestController
 @RequestMapping("/post_thumb")
@@ -42,7 +42,7 @@ public class PostThumbController {
      */
     @PostMapping("/")
     public BaseResponse<Integer> doThumb(@RequestBody PostThumbAddRequest postThumbAddRequest,
-            HttpServletRequest request) {
+        HttpServletRequest request) {
         if (postThumbAddRequest == null || postThumbAddRequest.getPostId() <= 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }

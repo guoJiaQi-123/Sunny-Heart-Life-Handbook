@@ -4,7 +4,7 @@ package com.yupi.springbootinit.constant;
  * 通用常量
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 public interface CommonConstant {
 
@@ -17,5 +17,5 @@ public interface CommonConstant {
      * 降序
      */
     String SORT_ORDER_DESC = " descend";
-    
+
 }

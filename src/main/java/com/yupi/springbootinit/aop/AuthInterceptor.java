@@ -6,7 +6,6 @@ import com.yupi.springbootinit.exception.BusinessException;
 import com.yupi.springbootinit.model.entity.User;
 import com.yupi.springbootinit.model.enums.UserRoleEnum;
 import com.yupi.springbootinit.service.UserService;
-
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
@@ -22,13 +21,11 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  * 权限校验 AOP
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @Aspect
 @Component
 public class AuthInterceptor {
-
-
 
     @Resource
     private UserService userService;
@@ -44,7 +41,7 @@ public class AuthInterceptor {
     public Object doInterceptor(ProceedingJoinPoint joinPoint, AuthCheck authCheck) throws Throwable {
         String mustRole = authCheck.mustRole();
         RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
-        HttpServletRequest request = ((ServletRequestAttributes) requestAttributes).getRequest();
+        HttpServletRequest request = ((ServletRequestAttributes)requestAttributes).getRequest();
         // 当前登录用户
         User loginUser = userService.getLoginUser(request);
         // 必须有该权限才通过

@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 帖子收藏接口
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @RestController
 @RequestMapping("/post_favour")
@@ -52,7 +52,7 @@ public class PostFavourController {
      */
     @PostMapping("/")
     public BaseResponse<Integer> doPostFavour(@RequestBody PostFavourAddRequest postFavourAddRequest,
-            HttpServletRequest request) {
+        HttpServletRequest request) {
         if (postFavourAddRequest == null || postFavourAddRequest.getPostId() <= 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
@@ -71,7 +71,7 @@ public class PostFavourController {
      */
     @PostMapping("/my/list/page")
     public BaseResponse<Page<PostVO>> listMyFavourPostByPage(@RequestBody PostQueryRequest postQueryRequest,
-            HttpServletRequest request) {
+        HttpServletRequest request) {
         if (postQueryRequest == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
@@ -81,7 +81,7 @@ public class PostFavourController {
         // 限制爬虫
         ThrowUtils.throwIf(size > 20, ErrorCode.PARAMS_ERROR);
         Page<Post> postPage = postFavourService.listFavourPostByPage(new Page<>(current, size),
-                postService.getQueryWrapper(postQueryRequest), loginUser.getId());
+            postService.getQueryWrapper(postQueryRequest), loginUser.getId());
         return ResultUtils.success(postService.getPostVOPage(postPage, request));
     }
 
@@ -93,7 +93,7 @@ public class PostFavourController {
      */
     @PostMapping("/list/page")
     public BaseResponse<Page<PostVO>> listFavourPostByPage(@RequestBody PostFavourQueryRequest postFavourQueryRequest,
-            HttpServletRequest request) {
+        HttpServletRequest request) {
         if (postFavourQueryRequest == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
@@ -103,7 +103,7 @@ public class PostFavourController {
         // 限制爬虫
         ThrowUtils.throwIf(size > 20 || userId == null, ErrorCode.PARAMS_ERROR);
         Page<Post> postPage = postFavourService.listFavourPostByPage(new Page<>(current, size),
-                postService.getQueryWrapper(postFavourQueryRequest.getPostQueryRequest()), userId);
+            postService.getQueryWrapper(postFavourQueryRequest.getPostQueryRequest()), userId);
         return ResultUtils.success(postService.getPostVOPage(postPage, request));
     }
 }
