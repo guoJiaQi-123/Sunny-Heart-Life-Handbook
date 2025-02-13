@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * 用户服务测试
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @SpringBootTest
 public class UserServiceTest {

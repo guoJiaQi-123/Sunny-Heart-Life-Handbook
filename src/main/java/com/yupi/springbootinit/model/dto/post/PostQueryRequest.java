@@ -1,16 +1,17 @@
 package com.yupi.springbootinit.model.dto.post;
 
 import com.yupi.springbootinit.common.PageRequest;
-import java.io.Serializable;
-import java.util.List;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.util.List;
 
 /**
  * 查询请求
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

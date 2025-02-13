@@ -6,7 +6,7 @@ import com.yupi.springbootinit.common.ErrorCode;
  * 抛异常工具类
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 public class ThrowUtils {
 

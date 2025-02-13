@@ -7,7 +7,7 @@ import com.yupi.springbootinit.model.entity.User;
  * 用户数据库操作
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 public interface UserMapper extends BaseMapper<User> {
 

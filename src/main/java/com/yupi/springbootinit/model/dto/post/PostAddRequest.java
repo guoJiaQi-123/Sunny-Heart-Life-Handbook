@@ -1,14 +1,15 @@
 package com.yupi.springbootinit.model.dto.post;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.List;
-import lombok.Data;
 
 /**
  * 创建请求
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @Data
 public class PostAddRequest implements Serializable {

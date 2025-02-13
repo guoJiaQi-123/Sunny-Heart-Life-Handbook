@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * 帖子收藏服务测试
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @SpringBootTest
 class PostFavourServiceTest {

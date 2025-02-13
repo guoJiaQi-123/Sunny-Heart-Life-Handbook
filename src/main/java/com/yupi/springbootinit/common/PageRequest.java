@@ -7,7 +7,7 @@ import lombok.Data;
  * 分页请求
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @Data
 public class PageRequest {

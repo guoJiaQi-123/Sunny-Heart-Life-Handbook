@@ -2,8 +2,8 @@
 <!-- @author 郭家旗 -->
 <!-- @from  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -87,15 +87,15 @@
             <artifactId>mysql-connector-j</artifactId> <!-- Spring Boot 3.x 使用这个依赖 -->
             <scope>runtime</scope>
         </dependency>
-
-
+        
+        
         <!-- https://mvnrepository.com/artifact/com.github.xiaoymin/knife4j-spring-boot-starter -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
             <version>4.4.0</version>
         </dependency>
-
+        
         <!-- https://cloud.tencent.com/document/product/436/10199-->
         <dependency>
             <groupId>com.qcloud</groupId>
@@ -108,7 +108,7 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.13.0</version> <!-- 较新的稳定版本 -->
         </dependency>
-
+        
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -127,7 +127,7 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.23</version> <!-- 较新的稳定版本 -->
         </dependency>
-
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -145,7 +145,7 @@
             <version>0.36.2</version>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>

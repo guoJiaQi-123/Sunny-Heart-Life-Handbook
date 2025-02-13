@@ -19,11 +19,11 @@ import org.springframework.transaction.annotation.Transactional;
  * 帖子点赞服务实现
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @Service
 public class PostThumbServiceImpl extends ServiceImpl<PostThumbMapper, PostThumb>
-        implements PostThumbService {
+    implements PostThumbService {
 
     @Resource
     private PostService postService;
@@ -46,7 +46,7 @@ public class PostThumbServiceImpl extends ServiceImpl<PostThumbMapper, PostThumb
         long userId = loginUser.getId();
         // 每个用户串行点赞
         // 锁必须要包裹住事务方法
-        PostThumbService postThumbService = (PostThumbService) AopContext.currentProxy();
+        PostThumbService postThumbService = (PostThumbService)AopContext.currentProxy();
         synchronized (String.valueOf(userId).intern()) {
             return postThumbService.doPostThumbInner(userId, postId);
         }
@@ -74,10 +74,10 @@ public class PostThumbServiceImpl extends ServiceImpl<PostThumbMapper, PostThumb
             if (result) {
                 // 点赞数 - 1
                 result = postService.update()
-                        .eq("id", postId)
-                        .gt("thumbNum", 0)
-                        .setSql("thumbNum = thumbNum - 1")
-                        .update();
+                    .eq("id", postId)
+                    .gt("thumbNum", 0)
+                    .setSql("thumbNum = thumbNum - 1")
+                    .update();
                 return result ? -1 : 0;
             } else {
                 throw new BusinessException(ErrorCode.SYSTEM_ERROR);
@@ -88,9 +88,9 @@ public class PostThumbServiceImpl extends ServiceImpl<PostThumbMapper, PostThumb
             if (result) {
                 // 点赞数 + 1
                 result = postService.update()
-                        .eq("id", postId)
-                        .setSql("thumbNum = thumbNum + 1")
-                        .update();
+                    .eq("id", postId)
+                    .setSql("thumbNum = thumbNum + 1")
+                    .update();
                 return result ? 1 : 0;
             } else {
                 throw new BusinessException(ErrorCode.SYSTEM_ERROR);

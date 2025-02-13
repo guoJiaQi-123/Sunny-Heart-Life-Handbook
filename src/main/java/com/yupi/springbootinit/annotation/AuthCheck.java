@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
  * 权限校验
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

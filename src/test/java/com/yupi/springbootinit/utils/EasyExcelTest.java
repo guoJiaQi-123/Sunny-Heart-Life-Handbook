@@ -15,7 +15,7 @@ import java.util.Map;
  * EasyExcel 测试
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @SpringBootTest
 public class EasyExcelTest {
@@ -24,10 +24,10 @@ public class EasyExcelTest {
     public void doImport() throws FileNotFoundException {
         File file = ResourceUtils.getFile("classpath:test_excel.xlsx");
         List<Map<Integer, String>> list = EasyExcel.read(file)
-                .excelType(ExcelTypeEnum.XLSX)
-                .sheet()
-                .headRowNumber(0)
-                .doReadSync();
+            .excelType(ExcelTypeEnum.XLSX)
+            .sheet()
+            .headRowNumber(0)
+            .doReadSync();
         System.out.println(list);
     }
 

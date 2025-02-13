@@ -4,7 +4,7 @@ package com.yupi.springbootinit.common;
  * 自定义错误码
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 public enum ErrorCode {
 

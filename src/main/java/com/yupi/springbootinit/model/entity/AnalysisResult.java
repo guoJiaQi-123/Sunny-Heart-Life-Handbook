@@ -85,17 +85,17 @@ public class AnalysisResult implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        AnalysisResult other = (AnalysisResult) that;
+        AnalysisResult other = (AnalysisResult)that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-                && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
-                && (this.getAll_content() == null ? other.getAll_content() == null : this.getAll_content().equals(other.getAll_content()))
-                && (this.getFacial_analysis() == null ? other.getFacial_analysis() == null : this.getFacial_analysis().equals(other.getFacial_analysis()))
-                && (this.getStatus_judgment() == null ? other.getStatus_judgment() == null : this.getStatus_judgment().equals(other.getStatus_judgment()))
-                && (this.getIndividualized() == null ? other.getIndividualized() == null : this.getIndividualized().equals(other.getIndividualized()))
-                && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
-                && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
-                && (this.getUpdateTime() == null ? other.getUpdateTime() == null : this.getUpdateTime().equals(other.getUpdateTime()))
-                && (this.getIsDelete() == null ? other.getIsDelete() == null : this.getIsDelete().equals(other.getIsDelete()));
+            && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
+            && (this.getAll_content() == null ? other.getAll_content() == null : this.getAll_content().equals(other.getAll_content()))
+            && (this.getFacial_analysis() == null ? other.getFacial_analysis() == null : this.getFacial_analysis().equals(other.getFacial_analysis()))
+            && (this.getStatus_judgment() == null ? other.getStatus_judgment() == null : this.getStatus_judgment().equals(other.getStatus_judgment()))
+            && (this.getIndividualized() == null ? other.getIndividualized() == null : this.getIndividualized().equals(other.getIndividualized()))
+            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
+            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
+            && (this.getUpdateTime() == null ? other.getUpdateTime() == null : this.getUpdateTime().equals(other.getUpdateTime()))
+            && (this.getIsDelete() == null ? other.getIsDelete() == null : this.getIsDelete().equals(other.getIsDelete()));
     }
 
     @Override

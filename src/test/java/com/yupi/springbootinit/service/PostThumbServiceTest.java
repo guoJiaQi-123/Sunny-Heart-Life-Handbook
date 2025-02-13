@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * 帖子点赞服务测试
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @SpringBootTest
 class PostThumbServiceTest {

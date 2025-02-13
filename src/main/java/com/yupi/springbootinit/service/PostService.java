@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
  * 帖子服务
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 public interface PostService extends IService<Post> {
 

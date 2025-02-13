@@ -22,11 +22,11 @@ import org.springframework.transaction.annotation.Transactional;
  * 帖子收藏服务实现
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @Service
 public class PostFavourServiceImpl extends ServiceImpl<PostFavourMapper, PostFavour>
-        implements PostFavourService {
+    implements PostFavourService {
 
     @Resource
     private PostService postService;
@@ -49,7 +49,7 @@ public class PostFavourServiceImpl extends ServiceImpl<PostFavourMapper, PostFav
         long userId = loginUser.getId();
         // 每个用户串行帖子收藏
         // 锁必须要包裹住事务方法
-        PostFavourService postFavourService = (PostFavourService) AopContext.currentProxy();
+        PostFavourService postFavourService = (PostFavourService)AopContext.currentProxy();
         synchronized (String.valueOf(userId).intern()) {
             return postFavourService.doPostFavourInner(userId, postId);
         }
@@ -85,10 +85,10 @@ public class PostFavourServiceImpl extends ServiceImpl<PostFavourMapper, PostFav
             if (result) {
                 // 帖子收藏数 - 1
                 result = postService.update()
-                        .eq("id", postId)
-                        .gt("favourNum", 0)
-                        .setSql("favourNum = favourNum - 1")
-                        .update();
+                    .eq("id", postId)
+                    .gt("favourNum", 0)
+                    .setSql("favourNum = favourNum - 1")
+                    .update();
                 return result ? -1 : 0;
             } else {
                 throw new BusinessException(ErrorCode.SYSTEM_ERROR);
@@ -99,9 +99,9 @@ public class PostFavourServiceImpl extends ServiceImpl<PostFavourMapper, PostFav
             if (result) {
                 // 帖子收藏数 + 1
                 result = postService.update()
-                        .eq("id", postId)
-                        .setSql("favourNum = favourNum + 1")
-                        .update();
+                    .eq("id", postId)
+                    .setSql("favourNum = favourNum + 1")
+                    .update();
                 return result ? 1 : 0;
             } else {
                 throw new BusinessException(ErrorCode.SYSTEM_ERROR);

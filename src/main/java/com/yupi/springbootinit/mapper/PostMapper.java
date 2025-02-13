@@ -2,6 +2,7 @@ package com.yupi.springbootinit.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.yupi.springbootinit.model.entity.Post;
+
 import java.util.Date;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  * 帖子数据库操作
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 public interface PostMapper extends BaseMapper<Post> {
 

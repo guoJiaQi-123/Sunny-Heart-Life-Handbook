@@ -4,7 +4,7 @@ package com.yupi.springbootinit.common;
  * 返回工具类
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 public class ResultUtils {
 

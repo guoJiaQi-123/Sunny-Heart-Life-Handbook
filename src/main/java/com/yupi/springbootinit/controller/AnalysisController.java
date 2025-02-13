@@ -1,6 +1,5 @@
 package com.yupi.springbootinit.controller;
 
-
 import com.yupi.springbootinit.common.BaseResponse;
 import com.yupi.springbootinit.common.ErrorCode;
 import com.yupi.springbootinit.common.ResultUtils;
@@ -12,7 +11,11 @@ import com.yupi.springbootinit.service.IServiceAssistant;
 import com.yupi.springbootinit.service.UserService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -33,7 +36,6 @@ public class AnalysisController {
     private UserService userService;
     @Resource
     private IServiceAssistant iServiceAssistant;
-
 
     /**
      * AI视觉理解
@@ -73,7 +75,6 @@ public class AnalysisController {
         String result = analysisResultService.getResultOne(request);
         return ResultUtils.success(result);
     }
-
 
     @GetMapping("/analysis")
     public BaseResponse<String> analysis(HttpServletRequest request) {

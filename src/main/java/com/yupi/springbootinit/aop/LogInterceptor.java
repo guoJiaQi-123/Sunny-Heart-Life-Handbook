@@ -1,6 +1,5 @@
 package com.yupi.springbootinit.aop;
 
-import java.util.UUID;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -13,11 +12,13 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import java.util.UUID;
+
 /**
  * 请求响应日志 AOP
  *
  * @author 郭家旗
- * @from 
+ * @from
  **/
 @Aspect
 @Component
@@ -34,7 +35,7 @@ public class LogInterceptor {
         stopWatch.start();
         // 获取请求路径
         RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
-        HttpServletRequest httpServletRequest = ((ServletRequestAttributes) requestAttributes).getRequest();
+        HttpServletRequest httpServletRequest = ((ServletRequestAttributes)requestAttributes).getRequest();
         // 生成请求唯一 id
         String requestId = UUID.randomUUID().toString();
         String url = httpServletRequest.getRequestURI();
@@ -43,7 +44,7 @@ public class LogInterceptor {
         String reqParam = "[" + StringUtils.join(args, ", ") + "]";
         // 输出请求日志
         log.info("request start，id: {}, path: {}, ip: {}, params: {}", requestId, url,
-                httpServletRequest.getRemoteHost(), reqParam);
+            httpServletRequest.getRemoteHost(), reqParam);
         // 执行原方法
         Object result = point.proceed();
         // 输出响应日志

@@ -29,7 +29,6 @@ public class AnalysisResultVO implements Serializable {
      */
     private Integer status;
 
-
     /**
      * 面部要素分析
      */
@@ -60,10 +59,8 @@ public class AnalysisResultVO implements Serializable {
      */
     private Date updateTime;
 
-
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
-
 
     /**
      * 包装类转对象

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yupi.springbootinit.mapper.AnalysisResultMapper">
-
+    
     <resultMap id="BaseResultMap" type="com.yupi.springbootinit.model.entity.AnalysisResult">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="status" column="status" jdbcType="TINYINT"/>
-            <result property="all_content" column="all_content" jdbcType="VARCHAR"/>
-            <result property="facial_analysis" column="facial_analysis" jdbcType="VARCHAR"/>
-            <result property="status_judgment" column="status_judgment" jdbcType="VARCHAR"/>
-            <result property="individualized" column="individualized" jdbcType="VARCHAR"/>
-            <result property="userId" column="userId" jdbcType="BIGINT"/>
-            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
-            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
-            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="status" column="status" jdbcType="TINYINT"/>
+        <result property="all_content" column="all_content" jdbcType="VARCHAR"/>
+        <result property="facial_analysis" column="facial_analysis" jdbcType="VARCHAR"/>
+        <result property="status_judgment" column="status_judgment" jdbcType="VARCHAR"/>
+        <result property="individualized" column="individualized" jdbcType="VARCHAR"/>
+        <result property="userId" column="userId" jdbcType="BIGINT"/>
+        <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+        <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
     </resultMap>
-
+    
     <sql id="Base_Column_List">
         id,status,all_content,
         facial_analysis,status_judgment,individualized,

@@ -6,11 +6,9 @@ import org.springframework.boot.test.context.SpringBootTest;
  * 主类测试
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @SpringBootTest
 class MainApplicationTests {
-
-
 
 }

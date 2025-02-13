@@ -1,13 +1,14 @@
 package com.yupi.springbootinit.model.dto.postfavour;
 
-import java.io.Serializable;
 import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * 帖子收藏 / 取消收藏请求
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @Data
 public class PostFavourAddRequest implements Serializable {

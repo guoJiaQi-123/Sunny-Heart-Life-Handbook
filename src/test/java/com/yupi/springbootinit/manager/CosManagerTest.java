@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * Cos 操作测试
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @SpringBootTest
 class CosManagerTest {

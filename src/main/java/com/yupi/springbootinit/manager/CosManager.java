@@ -4,15 +4,16 @@ import com.qcloud.cos.COSClient;
 import com.qcloud.cos.model.PutObjectRequest;
 import com.qcloud.cos.model.PutObjectResult;
 import com.yupi.springbootinit.config.CosClientConfig;
-import java.io.File;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Component;
+
+import java.io.File;
 
 /**
  * Cos 对象存储操作
  *
  * @author 郭家旗
- * @from 
+ * @from
  */
 @Component
 public class CosManager {
@@ -32,7 +33,7 @@ public class CosManager {
      */
     public PutObjectResult putObject(String key, String localFilePath) {
         PutObjectRequest putObjectRequest = new PutObjectRequest(cosClientConfig.getBucket(), key,
-                new File(localFilePath));
+            new File(localFilePath));
         return cosClient.putObject(putObjectRequest);
     }
 
@@ -45,7 +46,7 @@ public class CosManager {
      */
     public PutObjectResult putObject(String key, File file) {
         PutObjectRequest putObjectRequest = new PutObjectRequest(cosClientConfig.getBucket(), key,
-                file);
+            file);
         return cosClient.putObject(putObjectRequest);
     }
 }
