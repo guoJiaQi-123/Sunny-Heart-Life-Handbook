@@ -8,6 +8,23 @@ create database if not exists life_handbook;
 -- 切换库
 use life_handbook;
 
+-- 分析表
+create table if not exists analysis_result
+(
+    id              bigint auto_increment comment 'id' primary key,
+    status          boolean                                not null comment 'false-生成中，true-已生成',
+    all_content     text                                   null comment '所有内容',
+    facial_analysis text                                   null comment '面部要素分析',
+    status_judgment text                                   null comment '状态判断',
+    individualized  text                                   null comment '个性化方案提供',
+    userId          bigint                                 not null comment '创建用户 id',
+    createTime      datetime     default CURRENT_TIMESTAMP not null comment '创建时间',
+    updateTime      datetime     default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
+    isDelete        tinyint      default 0                 not null comment '是否删除',
+    index idx_unionId (id)
+) comment '分析' collate = utf8mb4_unicode_ci;
+
+
 -- 用户表
 create table if not exists user
 (
